@@ -36,13 +36,13 @@ public class ImovelController {
     @Autowired
     private ImovelRepository imovelRepository;
     
-    @Cacheable("listarTodosImovel")
+    @Cacheable("listarTodos")
     @GetMapping
     public List<Imovel> listarTodos() {
         return imovelRepository.findAll();
     }
     
-    @Cacheable("listarPeloIdImovel")
+    @Cacheable("listarPeloId")
     @GetMapping(value="/{id}")
     public Imovel listarPeloId(@PathVariable Long id) {
         Optional<Imovel> imovelResponse = imovelRepository.findById(id);

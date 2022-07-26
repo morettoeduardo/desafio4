@@ -32,13 +32,13 @@ public class TipoImovelController {
     @Autowired
     private TipoImovelRepository tipoImovelRepository;
     
-    @Cacheable("listarTodosTipoImovel")
+    //@Cacheable("listarTodos")
     @GetMapping
     public List<TipoImovel> listarTodos() {
         return tipoImovelRepository.findAll();
     }
     
-    @Cacheable("listarPeloIdTipoImovel")
+    //@Cacheable("listarPeloId")
     @GetMapping(value="/{id}")
     public TipoImovel listarPeloId(@PathVariable Long id) {
         Optional<TipoImovel> tipoImovelResponse = tipoImovelRepository.findById(id);

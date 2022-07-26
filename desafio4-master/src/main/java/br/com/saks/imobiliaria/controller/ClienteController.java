@@ -37,13 +37,13 @@ public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
     
-    @Cacheable("listarTodosCliente")
+    @Cacheable("listarTodos")
     @GetMapping
     public List<Cliente> listarTodos() {
         return clienteRepository.findAll();
     }
     
-    @Cacheable("listarPeloIdCliente")
+    @Cacheable("listarPeloId")
     @GetMapping(value="/{id}")
     public Cliente listarPeloId(@PathVariable Long id) {
         Optional<Cliente> clienteResponse = clienteRepository.findById(id);

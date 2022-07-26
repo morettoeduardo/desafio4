@@ -43,7 +43,7 @@ public class CacheConfiguration {
         cache1MinutoConfiguration.usePrefix();
         return RedisCacheManager.RedisCacheManagerBuilder.fromConnectionFactory(lettuceConnectionFactory)
                 .cacheDefaults(cache60MinutosConfiguration)
-                .withCacheConfiguration("listarTodos", cache1MinutoConfiguration)
+                .withCacheConfiguration("listarTodos",cache1MinutoConfiguration)
                 .build();
     }
 }

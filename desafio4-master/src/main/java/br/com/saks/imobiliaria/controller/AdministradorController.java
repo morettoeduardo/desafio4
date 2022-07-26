@@ -34,16 +34,18 @@ public class AdministradorController {
     @Autowired
     private AdministradorRepository administradorRepository;
     
-    @Cacheable("listarTodosAdministrador")
+    //@Cacheable("listarTodos")
     @GetMapping
     public List<Administrador> listarTodos() {
         return administradorRepository.findAll();
     }
     
-    @Cacheable("listarPeloIdAdministrador")
+    //@Cacheable("listarPeloId")
     @GetMapping(value="/{id}")
-    public Optional<Administrador> listarPeloId(@PathVariable Long id) {
-        return administradorRepository.findById(id);
+    public Administrador listarPeloId(@PathVariable Long id) {
+        Optional<Administrador> administradorResponse = administradorRepository.findById(id);
+        Administrador administrador = administradorResponse.get();
+        return administrador;
     }
     
     @PostMapping
