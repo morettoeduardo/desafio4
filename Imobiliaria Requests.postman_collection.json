@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "1428854e-2012-4994-aa50-8b3e15d2e224",
+		"name": "Imobiliaria Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20511619"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cliente/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pedrin\",\r\n    \"email\": \"pedrin@email.com\",\r\n    \"senha\": \"pedrin\",\r\n    \"telefone\": \"69654645\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar - Por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Eduaaaardddo\",\r\n    \"email\": \"eduardo@email.com\",\r\n    \"senha\": \"senha\",\r\n    \"telefone\": \"321321321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cliente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8081/cliente/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administradores",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/administrador",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar - Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/administrador/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Jorge\",\r\n    \"email\": \"jorge@email.com\",\r\n    \"senha\": \"jorge\",\r\n    \"status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/administrador",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar - Por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Jorgim\",\r\n    \"email\": \"jorge@email.com.br\",\r\n    \"senha\": \"123123123\",\r\n    \"status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/administrador/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/administrador/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo-Imoveis",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tipoimovel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoimovel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tipoimovel/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoimovel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"terreno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tipoimovel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoimovel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar - Por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"casteloa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tipoimovel/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoimovel",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tipoimovel/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoimovel",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Imovel",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/imovel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"imovel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar - ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/imovel/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"imovel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"titulo\" : \"Casa dahora\",\r\n\t\"descricao\" : \"uma casa muito dahora\",\r\n\t\"dataCriado\" : \"2022-03-22\",\r\n\t\"valor\" : \"20.22\",\r\n\t\"tipoImovel\":{\r\n\t\t\"id\" : \"1\"\r\n\t},\r\n\t\"clientes\":[\r\n\t\t{\r\n\t\t \"id\": \"1\"\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/imovel",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"imovel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar - Por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoImovel\": 2,\r\n    \"titulo\": \"Casa nova\",\r\n    \"descricao\": \"Casa de praiiia\",\r\n    \"dataCriacao\": \"2022-05-24\",\r\n    \"valor\": 1000,\r\n    \"status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/imovel/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"imovel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete - Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/imovel/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"imovel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
